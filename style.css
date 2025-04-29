@@ -1,0 +1,23 @@
+/* Sidebar remains fixed on the left */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 9999;
+}
+
+/* Prevent overlap by adding left margin to content */
+[data-role="content"] {
+  margin-left: 60px; /* adjust based on sidebar width */
+}
+
+.social-sidebar img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
